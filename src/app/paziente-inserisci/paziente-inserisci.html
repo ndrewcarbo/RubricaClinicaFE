@@ -1,0 +1,34 @@
+<div class="container">
+  <h2>Inserisci Paziente</h2>
+    <div class="form-group">
+      <label>Nome:</label>
+      <input [(ngModel)]="nome" name="nome" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+      <label>Cognome:</label>
+      <input [(ngModel)]="cogome" name="cognome" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+      <label>Indirizzo:</label>
+      <input [(ngModel)]="indirizzo" name="indirizzo" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label>Telefono:</label>
+      <input [(ngModel)]="telefono" name="telefono" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label>Email:</label>
+      <input [(ngModel)]="email" name="email" type="email" class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label>Data di Nascita:</label>
+      <input [(ngModel)]="nascita" name="nascita" type="date" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="RegistraPaziente()">Salva</button>
+</div>

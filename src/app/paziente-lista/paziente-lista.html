@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Indirizzo</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <!--<th>Data di Nascita</th>-->
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of elenco">
+                <td>{{p.nom}}</td>
+                <td>{{p.cog}}</td>
+                <td>{{p.ind}}</td>
+                <td>{{p.tel}}</td>
+                <td>{{p.ema}}</td>
+                <!--<td>{{p.nasc}}</td>-->
+            </tr>
+        </tbody>
+    </table>   
+</div>

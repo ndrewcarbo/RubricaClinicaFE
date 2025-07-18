@@ -1,0 +1,21 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <th>Data</th>
+            <th>Ora</th>
+            <th>Note</th>
+            <th>Codice</th>
+            <!--<th>Data di Nascita</th>-->
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of elenco">
+                <td>{{p.dat_appu}}</td>
+                <td>{{p.ora_appu}}</td>
+                <td>{{p.note}}</td>
+                <td>{{p.cod}}</td>
+                <!--<td>{{p.nasc}}</td>-->
+            </tr>
+        </tbody>
+    </table>   
+</div>
+

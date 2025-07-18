@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Nuovo Appuntamento</h2>
+    <div class="form-group">
+      <label>Data Appuntamento:</label>
+      <input [(ngModel)]="dat_appu" name="dat_appu" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+      <label>Ora Appuntamento:</label>
+      <input [(ngModel)]="ora_appu" name="ora_appu" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+      <label>Descrizione:</label>
+      <input [(ngModel)]="note" name="note" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="Salva()">Salva</button>
+</div>
