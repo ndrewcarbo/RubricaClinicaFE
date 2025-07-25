@@ -4,9 +4,11 @@ import { PazienteInserisci } from './paziente-inserisci/paziente-inserisci';
 import { PazienteDettaglio } from './paziente-dettaglio/paziente-dettaglio';
 import { AppuntamentoLista } from './appuntamento-lista/appuntamento-lista';
 import { AppuntamentoInserisci } from './appuntamento-inserisci/appuntamento-inserisci';
+import { Login } from './login/login';
 
 export const routes: Routes = [
-    {path: "", redirectTo: "pazienti", pathMatch:'full'},
+    {path: "", redirectTo: "login", pathMatch:'full'},
+    {path: "", component: Login},
     {path: "pazienti", component:PazienteLista},
     {path: "appuntamenti", component:AppuntamentoLista},
     {path: "pazienti/inserisci", component:PazienteInserisci},
