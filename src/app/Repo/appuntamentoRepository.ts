@@ -26,7 +26,8 @@ export class AppuntamentoRepository {
 
     async Create(obj: Appuntamento) :Promise<boolean>{
         let risultato: boolean = false;
-        
+        console.log("Dati inviati a POST:", JSON.stringify(obj));
+
         await fetch(baseUrl + "appuntamenti",{
             headers: {
                 "Content-Type": "application/json"

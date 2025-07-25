@@ -23,7 +23,7 @@ export class AppuntamentoService {
           return risultato;
         }
     
-        async CreaPaziente(obj: Appuntamento): Promise<boolean>{
+        async CreaAppuntamento(obj: Appuntamento): Promise<boolean>{
           let risultato: boolean = false;
     
           await this.repo.Create(obj)

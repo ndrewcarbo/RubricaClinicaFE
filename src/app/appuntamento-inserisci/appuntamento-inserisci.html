@@ -15,5 +15,15 @@
       <input [(ngModel)]="note" name="note" class="form-control" />
     </div>
 
+<div class="form-group">
+  <label>Paziente</label>
+  <select class="form-control" [(ngModel)]="pazCod" name="pazCod" required>
+    <option [value]="''" disabled selected>-- Seleziona paziente --</option>
+    <option *ngFor="let p of pazienti" [value]="p.cod">
+      {{ p.nom }} {{ p.cog }}
+    </option>
+  </select>
+</div>
+
     <button type="submit" class="btn btn-primary" (click)="Salva()">Salva</button>
 </div>
