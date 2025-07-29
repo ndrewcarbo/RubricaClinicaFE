@@ -12,9 +12,26 @@ import { AuthService } from '../services/auth.service';
 })
 export class Login {
   user:string | undefined;
-  pass:string | undefined;
+  passw:string | undefined;
 
-  constructor(private router: Router, private service: AuthService){
+  constructor(private router: Router, private service: AuthService){}
 
+  verifica() {
+    if (this.user && this.passw) {
+      this.service.EffettuaLogin(this.user, this.passw).then(risultato => {
+        if(risultato.token){
+          localStorage.setItem("ilToken", risultato.token);
+          this.router.navigateByUrl("/pazienti");
+        }
+      })
+    }
+    else {
+      alert("Inserisci username e password!");
+    }
   }
+
+  login() {
+  const token = 'fintoToken'; 
+  this.service.login(token);
+}
 }
